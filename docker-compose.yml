@@ -1,10 +1,8 @@
 version: "3.8"
 
 services:
-  app:
+  bot:
     build:
       context: ./bot
       dockerfile: Dockerfile
-    ports:
-      - 3000:3000
-    command: python main.py
+    restart: unless-stopped
